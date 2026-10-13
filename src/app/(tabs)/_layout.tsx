@@ -1,19 +1,25 @@
+import { Ionicons } from '@expo/vector-icons';
 import { Tabs } from 'expo-router';
-import { SymbolView } from 'expo-symbols';
 
 export default function TabsLayout() {
   return (
-    <Tabs screenOptions={{ headerShown: false }}>
+    <Tabs
+      screenOptions={{
+        tabBarActiveTintColor: '#007AFF',
+        tabBarInactiveTintColor: '#8E8E93',
+        headerShown: false,
+        tabBarStyle: {
+          backgroundColor: '#1C1C1E',
+          borderTopColor: '#2C2C2E',
+        },
+      }}
+    >
       <Tabs.Screen
-        name="workout"
+        name="index"
         options={{
           title: 'Workout',
           tabBarIcon: ({ color, size }) => (
-            <SymbolView
-              name={{ ios: 'dumbbell', android: 'fitness_center', web: 'fitness_center' }}
-              tintColor={color}
-              size={size}
-            />
+            <Ionicons name="barbell-outline" size={size} color={color} />
           ),
         }}
       />
@@ -22,11 +28,7 @@ export default function TabsLayout() {
         options={{
           title: 'History',
           tabBarIcon: ({ color, size }) => (
-            <SymbolView
-              name={{ ios: 'clock', android: 'history', web: 'history' }}
-              tintColor={color}
-              size={size}
-            />
+            <Ionicons name="calendar-outline" size={size} color={color} />
           ),
         }}
       />
@@ -35,11 +37,7 @@ export default function TabsLayout() {
         options={{
           title: 'Profile',
           tabBarIcon: ({ color, size }) => (
-            <SymbolView
-              name={{ ios: 'person', android: 'person', web: 'person' }}
-              tintColor={color}
-              size={size}
-            />
+            <Ionicons name="person-outline" size={size} color={color} />
           ),
         }}
       />

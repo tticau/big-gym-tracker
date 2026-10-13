@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function WorkoutScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Workout</Text>
+      <Text style={styles.text}>Workout</Text>
     </View>
   );
 }
@@ -11,11 +11,13 @@ export default function WorkoutScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F2F2F7',
   },
-  title: {
-    fontSize: 32,
-    fontWeight: '700',
+  text: {
+    fontSize: 28,
+    fontWeight: 'bold',
+    color: '#000000',
   },
 });
